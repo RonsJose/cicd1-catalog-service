@@ -18,4 +18,5 @@ public class ProductService {
         product.setId(nextId++);
         products.add(product);
         return product;
-
+    }
+}
