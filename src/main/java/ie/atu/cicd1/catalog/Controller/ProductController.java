@@ -47,4 +47,10 @@ public class ProductController {
         return service.getByCategoryName(categoryName);
     }
 
+    @GetMapping("/max-price")
+    public List<Product> getByMaximumPrice(
+            @RequestParam("price") BigDecimal Price) {
+        return service.getByMaximumPrice(Price);
+    }
+
 }

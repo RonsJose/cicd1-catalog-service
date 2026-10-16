@@ -58,4 +58,8 @@ public class ProductService {
     public List<Product> getByCategoryName(String categoryName) {
         return productRepository.findByCategoryName(categoryName);
     }
+
+    public List<Product> getByMaximumPrice(BigDecimal maxPrice) {
+        return productRepository.findByMaxPrice(maxPrice);
+    }
 }
