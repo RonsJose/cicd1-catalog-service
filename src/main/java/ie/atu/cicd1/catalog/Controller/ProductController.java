@@ -4,6 +4,8 @@ import ie.atu.cicd1.catalog.Model.Product;
 import ie.atu.cicd1.catalog.Service.ProductService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+
+import java.math.BigDecimal;
 import java.util.List;
 
 @RestController
@@ -31,4 +33,11 @@ public class ProductController {
     public Product getById(@PathVariable Long id) {
         return service.getById(id);
     }
+
+    @GetMapping("/min-price")
+    public List<Product> getByMinimumPrice(
+            @RequestParam("price") BigDecimal price) {
+        return service.getByMinimumPrice(price);
+    }
+
 }
