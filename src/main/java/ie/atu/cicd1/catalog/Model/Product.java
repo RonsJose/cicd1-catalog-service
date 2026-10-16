@@ -26,4 +26,8 @@ public class Product {
         this.price = price;
     }
 
+    @ManyToOne
+    @JoinColumn(name = "category_id")
+    private Category category;
+
 }
