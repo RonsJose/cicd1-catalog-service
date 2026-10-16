@@ -11,3 +11,9 @@ Link to Order repository: [Here](https://github.com/RonsJose/cicd1-order-service
 Final db<>fiddle session: [https://dbfiddle.uk/tHIGk2_6](https://dbfiddle.uk/tHIGk2_6)
 
 The fiddle contains completed SQL queries and the written answers as SQL comments.
+
+## JPQL
+
+Updated Post endpoint for product to include category id.
+
+New Endpoints: /min-price, /max-price, /by-category
