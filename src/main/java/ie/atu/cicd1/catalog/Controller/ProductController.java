@@ -2,6 +2,7 @@ package ie.atu.cicd1.catalog.Controller;
 
 import ie.atu.cicd1.catalog.Model.Product;
 import ie.atu.cicd1.catalog.Service.ProductService;
+import ie.atu.cicd1.catalog.dto.CreateProductRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,8 +26,8 @@ public class ProductController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public Product create(@RequestBody Product product) {
-        return service.create(product);
+    public Product create(@RequestBody CreateProductRequest request) {
+        return service.create(request);
     }
 
     @GetMapping("/{id}")
